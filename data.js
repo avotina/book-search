@@ -1,36 +1,36 @@
 export const booksData = [
     {
-        genres: ["fiction, romance"],
+        genres: ["fiction", "romance"],
         isAvailable: true,
-        image: "book-1.jpg",
+        image: ["book-1.jpg", "book-2.jpeg", "book-3.jpeg"],
         alt: "a book cover"
     },
 
     {
         genres: ["science-fiction"],
-        isAvailable: false,
-        image: "book-2.jpg",
+        isAvailable: true,
+        image: "book-2.jpeg",
         alt: "a book cover"
     },
 
     {
         genres: ["fiction", "horror"],
         isAvailable: true,
-        image: "book-3.jpg",
+        image: "book-3.jpeg",
         alt: "a book cover"
     },
 
     {
         genres: ["philosophy", "non-fiction"],
-        isAvailable: false,
-        image: "book-4.jpg",
+        isAvailable: true,
+        image: "book-4.jpeg",
         alt: "a book cover"
     },
 
     {
         genres: ["self-help", "non-fiction"],
         isAvailable: true,
-        image: "book-5.jpg",
+        image: "book-5.jpeg",
         alt: "a book cover"
     },
 ]

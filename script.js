@@ -2,6 +2,72 @@ import { booksData } from "/data.js"
 
 
 const bookRadios = document.getElementById("book-radios")
+const getImageBtn = document.getElementById('get-image-btn')
+const gifsOnlyOption = document.getElementById('gifs-only-option')
+const memeModalInner = document.getElementById('meme-modal-inner')
+const memeModal = document.getElementById('meme-modal')
+const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
+
+bookRadios.addEventListener('change', highlightCheckedOption)
+
+memeModalCloseBtn.addEventListener('click', closeModal)
+
+getImageBtn.addEventListener('click', renderBook)
+
+
+function highlightCheckedOption(e){
+    const radios = document.getElementsByClassName('radio')
+    for (let radio of radios){
+        radio.classList.remove('highlight')
+    }
+    document.getElementById(e.target.id).parentElement.classList.add('highlight')
+}
+
+function closeModal(){
+    memeModal.style.display = 'none'
+}
+
+function renderBook(){
+    const bookObject = getSingleBookObject()
+    memeModalInner.innerHTML =  `
+        <img 
+        class="cat-img" 
+        src="./images/${bookObject.image}"
+        alt="${bookObject.alt}"
+        >
+        `
+    memeModal.style.display = 'flex'
+}
+
+function getSingleBookObject(){
+    const booksArray = getMatchingBooksArray()
+    
+    if(booksArray.length === 1){
+        return booksArray[0]
+    }
+    else{
+        const randomNumber = Math.floor(Math.random() * booksArray.length)
+        return booksArray[randomNumber]
+    }
+}
+
+function getMatchingBooksArray(){     
+    if(document.querySelector('input[type="radio"]:checked')){
+        const selectedBook = document.querySelector('input[type="radio"]:checked').value
+        const isAvailable = gifsOnlyOption.checked
+        
+        const matchingBooksArray = booksData.filter(function(book){
+            
+            if(isAvailable){
+                return book.genres.includes(selectedBook) && book.isAvailable
+            }
+            else{
+                return book.genres.includes(selectedBook)
+            }            
+        })
+        return matchingBooksArray 
+    }  
+}
 
 function getBooksArray(bookItems) {
     const booksArray = []
