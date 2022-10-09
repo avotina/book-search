@@ -7,6 +7,7 @@ const gifsOnlyOption = document.getElementById('gifs-only-option')
 const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
 const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
+const notAvailableMessage = document.getElementById("message")
 
 bookRadios.addEventListener('change', highlightCheckedOption)
 
@@ -62,7 +63,8 @@ function getMatchingBooksArray(){
                 return book.genres.includes(selectedBook) && book.isAvailable
             }
             else{
-                return book.genres.includes(selectedBook)
+                // return book.genres.includes(selectedBook)
+                return notAvailableMessage.textContent = "Book is out of stock"
             }            
         })
         return matchingBooksArray 
