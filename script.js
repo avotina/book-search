@@ -61,11 +61,11 @@ function getMatchingBooksArray(){
             
             if(isAvailable){
                 return book.genres.includes(selectedBook) && book.isAvailable
-            }
-            else{
-                // return book.genres.includes(selectedBook)
+            } else if {
+                return book.genres.includes(selectedBook)  
+            } else {
                 return notAvailableMessage.textContent = "Book is out of stock"
-            }            
+            }           
         })
         return matchingBooksArray 
     }  

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Books search</title>
+</head>
+<body>
+    <header>
+            <img src="images/book-1.jpg">
+        <div>
+            <h2>Find your favorite book here 📚 </h2>
+        </div>
+    </header>
+    <main>
+        <h3>Select the category</h3>
+        <div class="controls-container" id="controls-container">
+            <div class="book-radios" id="book-radios"></div>
+            <div class="instock-check">
+				<label for="instock-only-option" class="instock-check-label">In stock only</label>
+				<input type="checkbox" id="instock-only-option">
+                <button class="get-books-btn" id="get-books-btn">Get Books</button>
+			</div>
+        </div>
+    </main>
+    <div class="meme-modal" id="meme-modal">
+        <button class="meme-modal-close-btn" id="meme-modal-close-btn">X</button>
+        <div id="meme-modal-inner"></div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
