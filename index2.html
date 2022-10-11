@@ -1,35 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles2.css">
-    <title>Books search</title>
-</head>
-<body>
-    <header>
-            <img src="images/book-1.jpg">
-        <div>
-            <h2>Find your favorite book here 📚 </h2>
-        </div>
-    </header>
-    <main>
-        <h3>Select the category</h3>
-        <div class="controls-container" id="controls-container">
-            <div class="book-radios" id="book-radios"></div>
-            <div class="instock-check">
-				<label for="instock-only-option" class="instock-check-label">In stock only</label>
-				<input type="checkbox" id="instock-only-option">
-                <button class="get-books-btn" id="get-books-btn">Get Books</button>
-			</div>
-        </div>
-    </main>
-    <div class="meme-modal" id="meme-modal">
-        <button class="meme-modal-close-btn" id="meme-modal-close-btn">X</button>
-        <div id="meme-modal-inner"></div>
-    </div>
+<html>
 
-    <script src="script2.js"></script>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<link rel="stylesheet" href="styles2.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="header-inner">
+			<img src="./images/book-1.jpg" class="cover-img">
+			<div>
+				<h2>Pumpkin's Purrfect...</h2>
+				<h1>Meme Picker</h1>
+			</div>
+		</div>
+	</header>
+	<main>
+		<h3>Select Book Category:</h3>
+		<div class="controls-container">
+			<div class="book-radios" id="book-radios"></div>
+			<div class="isAvailable-check">
+				<label for="isAvailable-only-option" class="isAvailable-check-label">In stock only</label>
+				<input type="checkbox" id="isAvailable-only-option">
+			</div>
+			<button class="get-book-btn" id="get-book-btn">Get Image</button>
+		</div>
+	</main>
+		<div class="book-modal" id="book-modal">
+			<button class="book-modal-close-btn" id="book-modal-close-btn">X</button>
+			<div id="book-modal-inner"></div>
+		</div>
+	<script src="script2.js" type="module"></script>
 </body>
+
 </html>
