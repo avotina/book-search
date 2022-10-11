@@ -6,7 +6,9 @@ function getBooksArray(books) {
     const booksArray = []
     for (let book of books) {
         for (let cover of book.genres) {
-            booksArray.push(cover)
+            if (!booksArray.includes(cover)) {
+                booksArray.push(cover)
+            }
         }
     }
     return booksArray
@@ -16,10 +18,18 @@ function renderBookRadios(books){
     const bookCovers = getBooksArray(books)
     let bookRadiosHtml = ""
         for (let cover of bookCovers) {
-            bookRadiosHtml += `<p>${cover}</p>`
-            bookRadios.innerHTML = bookRadiosHtml
-        }
-
+        bookRadiosHtml += `
+        <div class="radio">
+            <label for=${cover}>${cover}</label>
+                <input
+                type="radio"
+                id=${cover}
+                value=${cover}
+                name= "covers"
+                >
+        </div>`
+     }
+    bookRadios.innerHTML = bookRadiosHtml
 }
 
 renderBookRadios(booksData)
