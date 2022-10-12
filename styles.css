@@ -34,11 +34,11 @@ header{
     margin: 0 auto;
     width: 370px;
     gap: 15px;
-    padding: 10px 0 0 0;
+    padding: 25px 0 25px 0;
 }
 
 .cover-img{
-    width: 80px;
+    width: 90px;
 }
 
 .controls-container{
@@ -52,14 +52,14 @@ header{
 .book-radios{
     display: flex;
     flex-direction: column;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #3b3939;
     border-radius: 5px;
 }
 
 .radio{
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #bcbcbc;
+    border-bottom: 1px solid #3b3939;
     padding: 4px 8px;
 }
 
@@ -96,7 +96,7 @@ input[type="radio"]{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 16px;
+    margin: 50px;
 }
 
 .isAvailable-check-label{
@@ -105,13 +105,13 @@ input[type="radio"]{
 }
 
 .get-book-btn{
-    background-color: #67595e;
+    background-color: rgb(107, 24, 107);
     color: #eed6d3;
-    padding: 15px 19px;
+    padding: 10px 15px;
     font-size: 24px;
     border: none;
     border-radius: 5px;
-    margin-bottom: 8px;
+    margin: 20px 0 8px 0;
 }
 
 /* modal */

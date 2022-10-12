@@ -2,6 +2,13 @@ import { booksData } from "./data.js";
 
 const bookRadios = document.getElementById("book-radios")
 
+bookRadios.addEventListener("change", highlightCheckedOption)
+
+function highlightCheckedOption(e){
+        document.getElementById(e.target.id).parentElement.classList.add("highlight")
+}
+
+
 function getBooksArray(books) {
     const booksArray = []
     for (let book of books) {
