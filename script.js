@@ -5,7 +5,11 @@ const bookRadios = document.getElementById("book-radios")
 bookRadios.addEventListener("change", highlightCheckedOption)
 
 function highlightCheckedOption(e){
-        document.getElementById(e.target.id).parentElement.classList.add("highlight")
+const radioItems = document.getElementsByClassName("radio")
+    for (let item of radioItems) {
+        item.classList.remove("highlight")
+    }
+     document.getElementById(e.target.id).parentElement.classList.add("highlight")
 }
 
 
