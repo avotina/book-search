@@ -2,14 +2,16 @@ import { booksData } from "./data.js";
 
 const bookRadios = document.getElementById("book-radios")
 const getBooksBtn = document.getElementById("get-book-btn")
+const renderBooks = document.getElementById("render")
 
 bookRadios.addEventListener("change", highlightCheckedOption)
 getBooksBtn.addEventListener("click", getMatchingBooksArray)
 
 function getMatchingBooksArray() {
     if (document.querySelector('input[type="radio"]:checked')) {
-        const selectedCatagory = document.querySelector('input[type="radio"]:checked').value
-        console.log(selectedCatagory)
+        const selectedCategory = document.querySelector('input[type="radio"]:checked').value
+        // console.log(selectedCategory)
+        renderBooks.innerHTML = ``
     }
 }
 
