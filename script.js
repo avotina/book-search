@@ -7,6 +7,8 @@ const renderBooks = document.getElementById("render")
 bookRadios.addEventListener("change", highlightCheckedOption)
 getBooksBtn.addEventListener("click", getMatchingBooksArray)
 
+//What to do next?
+
 function getMatchingBooksArray() {
     if (document.querySelector('input[type="radio"]:checked')) {
         const selectedCategory = document.querySelector('input[type="radio"]:checked').value
